@@ -1,9 +1,9 @@
 /* Skull Darts 71 · Service worker (cache hors-ligne) */
-const CACHE = 'sd71-halloween-v3';
+const CACHE = 'sd71-halloween-v4';
 const ASSETS = [
   './', 'index.html', 'manifest.webmanifest',
-  'assets/css/styles.css',
-  'assets/js/i18n.js', 'assets/js/audio.js', 'assets/js/board.js', 'assets/js/intro.js', 'assets/js/game.js', 'assets/js/app.js',
+  'assets/css/styles.css?v=1.2.1',
+  'assets/js/i18n.js?v=1.2.1', 'assets/js/audio.js?v=1.2.1', 'assets/js/board.js?v=1.2.1', 'assets/js/intro.js?v=1.2.1', 'assets/js/game.js?v=1.2.1', 'assets/js/app.js?v=1.2.1',
   'assets/fonts/creepster.woff2', 'assets/fonts/fredoka.woff2',
   'assets/img/logo.svg', 'assets/img/affiche-480.webp', 'assets/img/affiche-768.webp'
 ];

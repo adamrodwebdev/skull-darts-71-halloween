@@ -2,7 +2,7 @@
 
 Site vitrine statique (HTML/CSS/JS natifs, aucune dépendance, aucun build).
 
-Version actuelle : **1.2.0** — voir [CHANGELOG.md](CHANGELOG.md).
+Version actuelle : **1.2.1** — voir [CHANGELOG.md](CHANGELOG.md).
 
 ## Lancer en local
 ```bash
@@ -33,4 +33,4 @@ Performance 100 · Accessibilité 100 · Bonnes pratiques 100 · SEO 100
 
 ## Versionnage
 - Branche `main`, tags `vX.Y.Z` (SemVer) et entrée correspondante dans `CHANGELOG.md`.
-- Pensez à incrémenter la version de cache dans `sw.js` à chaque mise en ligne.
+- À chaque mise en ligne : incrémenter le cache dans `sw.js` **et** le paramètre `?v=` des CSS/JS dans `index.html` et `sw.js` (sinon les navigateurs gardent les anciens scripts).

@@ -43,6 +43,7 @@
     'tl.1.t': 'Doors open', 'tl.1.d': 'Kids’ snacks &amp; disco',
     'tl.2.t': 'Happy hour', 'tl.2.d': 'Until 8:30 pm · grown-ups’ time',
     'tl.3.t': 'DJ set', 'tl.3.d': 'Prépa’soirée 39 on the decks',
+    'tl.time.17h00': '5:00 pm', 'tl.time.19h30': '7:30 pm', 'tl.time.20h30': '8:30 pm',
     'kids.1': 'Children must be accompanied and remain under their parents’ responsibility.',
     'kids.2': 'Children are welcome during the grown-ups’ part of the evening too.',
     'dj.eyebrow': 'Tonight’s DJ',

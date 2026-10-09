@@ -3,6 +3,14 @@
 Toutes les évolutions notables du site sont consignées ici.
 Format : [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/) · Versionnage : [SemVer](https://semver.org/lang/fr/).
 
+## [1.2.1] – 2026-10-09
+### Corrigé
+- Les nouveaux textes restaient en français en mode anglais chez les visiteurs ayant un ancien `i18n.js` en cache : les CSS/JS sont maintenant versionnés (`?v=1.2.1`) pour forcer leur rechargement à chaque version.
+- Horaires du déroulé traduits en anglais (5:00 pm, 7:30 pm, 8:30 pm).
+
+### Modifié
+- Service worker : cache `v4`.
+
 ## [1.2.0] – 2026-10-09
 ### Ajouté
 - Rappel « enfants » dans le programme : enfants accompagnés et sous la responsabilité de leurs parents, autorisés aussi pour la partie adultes (+ question dans la FAQ).
@@ -32,6 +40,7 @@ Format : [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/) · Versionnage
 - Première version : intro fléchette + écran brisé, sound design Web Audio, FR/EN, thème sombre/clair,
   compte à rebours, programme, infos pratiques, mini-jeu, affiche, FAQ, PWA, SEO.
 
+[1.2.1]: https://github.com/adamrodwebdev/skull-darts-71-halloween/compare/v1.2.0...v1.2.1
 [1.2.0]: https://github.com/adamrodwebdev/skull-darts-71-halloween/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/adamrodwebdev/skull-darts-71-halloween/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/adamrodwebdev/skull-darts-71-halloween/releases/tag/v1.0.0
