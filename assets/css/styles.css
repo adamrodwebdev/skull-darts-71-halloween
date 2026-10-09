@@ -88,19 +88,20 @@ body.is-locked{overflow:hidden}
 
 /* ---------- Intro ---------- */
 .intro{display:none}
-.js .intro{display:grid;position:fixed;inset:0;z-index:100;place-items:center;background:radial-gradient(120% 90% at 50% 40%,#2b1550 0%,#120a22 55%,#07030f 100%)}
+.js .intro{display:grid;position:fixed;inset:0;z-index:100;place-items:end center;background:radial-gradient(120% 90% at 50% 40%,#2b1550 0%,#120a22 55%,#07030f 100%)}
 .intro.is-playing{background:transparent}
 .intro.is-done{display:none}
 .intro__canvas{position:absolute;inset:0;width:100%;height:100%}
-.intro__ui{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center;padding:24px;margin-top:min(62vh,520px);transition:opacity .35s,transform .35s var(--ease-out)}
+.intro__ui{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:clamp(8px,1.6vh,14px);text-align:center;padding:16px 24px calc(16px + env(safe-area-inset-bottom));transition:opacity .35s,transform .35s var(--ease-out)}
 .intro__ui.is-hidden{opacity:0;transform:translateY(20px);pointer-events:none}
+.logo{border-radius:50%;background:#000;box-shadow:0 0 0 2px rgba(255,138,43,.85),0 0 18px rgba(255,122,24,.45)}
+.intro__logo{width:clamp(64px,10vh,88px);height:auto;margin-bottom:4px}
 .intro__kicker{color:#ffd9a8;letter-spacing:.2em;text-transform:uppercase;font-size:.8rem;font-weight:600}
 .intro__title{font-family:var(--font-display);font-weight:400;font-size:clamp(2rem,6vw,3.2rem);color:#ffb347;text-shadow:0 0 24px rgba(255,122,24,.6);letter-spacing:.02em}
 .intro__actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
 .intro .btn--ghost{color:#f6ead2;border-color:rgba(246,234,210,.3)}
 .intro .btn--primary{background:#ff8a2b;color:#1a0d00}
 .intro__skip{background:none;border:0;color:#d9c9ef;text-decoration:underline;text-underline-offset:4px;cursor:pointer;padding:8px;font-size:.9rem;min-height:44px}
-@media (max-height:640px){.intro__ui{margin-top:48vh}}
 
 /* ---------- En-tête ---------- */
 .header{position:fixed;inset:0 0 auto;z-index:50;height:var(--header-h);transition:background-color .35s,box-shadow .35s,transform .45s var(--ease-out)}

@@ -21,9 +21,9 @@
     canvas.width = Math.round(W * DPR); canvas.height = Math.round(H * DPR);
     ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
     cx = W / 2;
-    cy = Math.min(H * 0.34, H * 0.62 - 150);
-    R = Math.max(70, Math.min(W * 0.34, H * 0.2, 210));
-    cy = Math.max(cy, R * 1.3 + 20);
+    var top = ui.offsetTop || H * 0.6; // l'espace au-dessus des boutons accueille la cible
+    R = Math.max(60, Math.min(W * 0.34, (top - 36) / 2.6, 210));
+    cy = Math.max(R * 1.3 + 16, top / 2);
   }
 
   function bg(c) {

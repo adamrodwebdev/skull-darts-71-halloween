@@ -15,7 +15,8 @@
   <meta property="og:locale" content="fr_FR">
   <meta property="og:locale:alternate" content="en_GB">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="assets/img/icon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/icon-192.png" type="image/png" sizes="192x192">
   <link rel="apple-touch-icon" href="assets/img/icon-180.png">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="preload" href="assets/fonts/creepster.woff2" as="font" type="font/woff2" crossorigin>
@@ -47,7 +48,7 @@
     "image": ["assets/img/og-image.jpg"],
     "description": "Goûter & boom pour les enfants dès 17h, happy hour (19h30–20h30) et animation DJ pour les adultes dès 19h30. Buvette & petite restauration. Soirée déguisée.",
     "offers": { "@type": "Offer", "price": "3", "priceCurrency": "EUR", "availability": "https://schema.org/InStock" },
-    "organizer": { "@type": "Organization", "name": "Skull Darts 71" }
+    "organizer": { "@type": "Organization", "name": "Skull Darts 71", "logo": "assets/img/logo.svg" }
   }
   </script>
 </head>
@@ -58,6 +59,7 @@
   <div class="intro" id="intro" role="dialog" aria-modal="true" aria-labelledby="intro-title">
     <canvas class="intro__canvas" id="intro-canvas" aria-hidden="true"></canvas>
     <div class="intro__ui" id="intro-ui">
+      <img class="logo intro__logo" src="assets/img/logo.svg" width="88" height="88" alt="">
       <p class="intro__kicker" data-i18n="intro.kicker">Skull Darts 71 présente</p>
       <h2 class="intro__title" id="intro-title" data-i18n="intro.title">Visez le centre…</h2>
       <div class="intro__actions">
@@ -78,7 +80,7 @@
   <header class="header" id="top">
     <div class="header__inner">
       <a class="brand" href="#top" aria-label="Skull Darts 71 – accueil" data-i18n-aria="brand.aria">
-        <img src="assets/img/icon.svg" width="36" height="36" alt="">
+        <img class="logo" src="assets/img/logo.svg" width="44" height="44" alt="">
         <span>Skull Darts <b>71</b></span>
       </a>
       <nav class="nav" aria-label="Navigation principale" data-i18n-aria="nav.aria">
@@ -309,7 +311,7 @@
 
   <footer class="footer">
     <div class="container footer__inner">
-      <p class="footer__brand"><img src="assets/img/icon.svg" width="40" height="40" alt="" loading="lazy"> <span><b>Skull Darts 71</b> · <span data-i18n="footer.tag">Club de fléchettes</span></span></p>
+      <p class="footer__brand"><img class="logo" src="assets/img/logo.svg" width="64" height="64" alt="" loading="lazy"> <span><b>Skull Darts 71</b> · <span data-i18n="footer.tag">Club de fléchettes</span></span></p>
       <p class="footer__small"><span data-i18n="footer.org">Événement organisé par Skull Darts 71.</span> <button type="button" class="linkbtn" id="replay-intro" data-i18n="footer.replay">Rejouer l’intro</button></p>
     </div>
   </footer>

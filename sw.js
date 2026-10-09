@@ -1,11 +1,11 @@
 /* Skull Darts 71 · Service worker (cache hors-ligne) */
-const CACHE = 'sd71-halloween-v1';
+const CACHE = 'sd71-halloween-v2';
 const ASSETS = [
   './', 'index.html', 'manifest.webmanifest',
   'assets/css/styles.css',
   'assets/js/i18n.js', 'assets/js/audio.js', 'assets/js/board.js', 'assets/js/intro.js', 'assets/js/game.js', 'assets/js/app.js',
   'assets/fonts/creepster.woff2', 'assets/fonts/fredoka.woff2',
-  'assets/img/icon.svg', 'assets/img/affiche-480.webp', 'assets/img/affiche-768.webp'
+  'assets/img/logo.svg', 'assets/img/affiche-480.webp', 'assets/img/affiche-768.webp'
 ];
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(ASSETS)).then(() => self.skipWaiting()));

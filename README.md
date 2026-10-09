@@ -2,12 +2,15 @@
 
 Site vitrine statique (HTML/CSS/JS natifs, aucune dépendance, aucun build).
 
+Version actuelle : **1.1.0** — voir [CHANGELOG.md](CHANGELOG.md).
+
 ## Lancer en local
 ```bash
-npx serve .        # ou : python3 -m http.server
+npm start          # ou : npx serve .  /  python3 -m http.server
 ```
 
 ## Structure
+- `assets/img/logo.svg` — logo officiel Skull Darts 71
 - `index.html` — page unique (SEO, données structurées Event, Open Graph)
 - `assets/css/styles.css` — thèmes sombre/clair, animations
 - `assets/js/i18n.js` — FR (par défaut) / EN — `?lang=en`
@@ -27,3 +30,7 @@ Performance 100 · Accessibilité 100 · Bonnes pratiques 100 · SEO 100
 
 ## À vérifier
 - Heure de fin (non indiquée sur l'affiche) : fixée à 2h du matin dans `app.js` (compte à rebours + fichier .ics).
+
+## Versionnage
+- Branche `main`, tags `vX.Y.Z` (SemVer) et entrée correspondante dans `CHANGELOG.md`.
+- Pensez à incrémenter la version de cache dans `sw.js` à chaque mise en ligne.
