@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Halloween Party 2026 · Skull Darts 71 · Bellevesvre</title>
+  <meta name="description" content="Skull Darts 71 vous invite à sa Halloween Party le samedi 31 octobre 2026 à la salle des fêtes de Bellevesvre : goûter & boom pour les enfants dès 17h, happy hour et DJ pour les adultes dès 19h30. Entrée 3 €.">
+  <meta name="theme-color" content="#120a22" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f3e3c3" media="(prefers-color-scheme: light)">
+  <meta name="color-scheme" content="dark light">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Halloween Party · Skull Darts 71">
+  <meta property="og:description" content="Samedi 31 octobre · Salle des fêtes de Bellevesvre · Enfants dès 17h, adultes dès 19h30 · Entrée 3 €">
+  <meta property="og:image" content="assets/img/og-image.jpg">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:locale:alternate" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/icon-180.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="assets/fonts/creepster.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/fredoka.woff2" as="font" type="font/woff2" crossorigin>
+  <script>
+    /* Thème appliqué avant le rendu : pas de flash */
+    (function(){var t,q=new URLSearchParams(location.search);try{t=q.get('theme')||localStorage.getItem('sd71-theme')}catch(e){}
+    if(t!=='light'&&t!=='dark')t=null;
+    if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';
+    document.documentElement.dataset.theme=t;
+    var l;try{l=q.get('lang')||localStorage.getItem('sd71-lang')}catch(e){}
+    if(l==='en')document.documentElement.dataset.pendingLang='en';
+    document.documentElement.classList.add('js');})();
+  </script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "Halloween Party – Skull Darts 71",
+    "startDate": "2026-10-31T17:00:00+01:00",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "location": {
+      "@type": "Place",
+      "name": "Salle des fêtes de Bellevesvre",
+      "address": { "@type": "PostalAddress", "addressLocality": "Bellevesvre", "postalCode": "71270", "addressRegion": "Saône-et-Loire", "addressCountry": "FR" }
+    },
+    "image": ["assets/img/og-image.jpg"],
+    "description": "Goûter & boom pour les enfants dès 17h, happy hour (19h30–20h30) et animation DJ pour les adultes dès 19h30. Buvette & petite restauration. Soirée déguisée.",
+    "offers": { "@type": "Offer", "price": "3", "priceCurrency": "EUR", "availability": "https://schema.org/InStock" },
+    "organizer": { "@type": "Organization", "name": "Skull Darts 71" }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Aller au contenu</a>
+
+  <!-- ===== INTRO : la fléchette ===== -->
+  <div class="intro" id="intro" role="dialog" aria-modal="true" aria-labelledby="intro-title">
+    <canvas class="intro__canvas" id="intro-canvas" aria-hidden="true"></canvas>
+    <div class="intro__ui" id="intro-ui">
+      <p class="intro__kicker" data-i18n="intro.kicker">Skull Darts 71 présente</p>
+      <h2 class="intro__title" id="intro-title" data-i18n="intro.title">Visez le centre…</h2>
+      <div class="intro__actions">
+        <button class="btn btn--primary" id="intro-throw" type="button">
+          <svg aria-hidden="true" width="20" height="20"><use href="#i-sound"/></svg>
+          <span data-i18n="intro.throw">Lancer la fléchette</span>
+        </button>
+        <button class="btn btn--ghost" id="intro-mute" type="button">
+          <svg aria-hidden="true" width="20" height="20"><use href="#i-mute"/></svg>
+          <span data-i18n="intro.silent">Sans le son</span>
+        </button>
+      </div>
+      <button class="intro__skip" id="intro-skip" type="button" data-i18n="intro.skip">Passer l’intro</button>
+    </div>
+  </div>
+
+  <!-- ===== EN-TÊTE ===== -->
+  <header class="header" id="top">
+    <div class="header__inner">
+      <a class="brand" href="#top" aria-label="Skull Darts 71 – accueil" data-i18n-aria="brand.aria">
+        <img src="assets/img/icon.svg" width="36" height="36" alt="">
+        <span>Skull Darts <b>71</b></span>
+      </a>
+      <nav class="nav" aria-label="Navigation principale" data-i18n-aria="nav.aria">
+        <a href="#programme" data-i18n="nav.program">Programme</a>
+        <a href="#infos" data-i18n="nav.info">Infos</a>
+        <a href="#jeu" data-i18n="nav.game">Jeu</a>
+        <a href="#affiche" data-i18n="nav.poster">Affiche</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      </nav>
+      <div class="controls">
+        <button class="ctrl" id="lang-toggle" type="button">
+          <span class="ctrl__lang"><span data-l="fr">FR</span> <span data-l="en">EN</span></span><span class="sr-only" data-i18n="ctrl.lang">&nbsp;: switch to English</span>
+        </button>
+        <button class="ctrl" id="theme-toggle" type="button" aria-label="Basculer le thème clair / sombre" data-i18n-aria="ctrl.theme">
+          <svg class="ico-moon" aria-hidden="true" width="20" height="20"><use href="#i-moon"/></svg>
+          <svg class="ico-sun" aria-hidden="true" width="20" height="20"><use href="#i-sun"/></svg>
+        </button>
+        <button class="ctrl" id="sound-toggle" type="button" aria-pressed="false" aria-label="Activer le son" data-i18n-aria="ctrl.sound">
+          <svg class="ico-sound" aria-hidden="true" width="20" height="20"><use href="#i-sound"/></svg>
+          <svg class="ico-mute" aria-hidden="true" width="20" height="20"><use href="#i-mute"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <!-- ===== HÉRO ===== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__sky" aria-hidden="true">
+        <div class="moon"></div>
+        <div class="stars"></div>
+        <svg class="bat bat--1" width="60" height="30"><use href="#i-bat"/></svg>
+        <svg class="bat bat--2" width="44" height="22"><use href="#i-bat"/></svg>
+        <svg class="bat bat--3" width="34" height="17"><use href="#i-bat"/></svg>
+        <svg class="ghost-float" width="90" height="110"><use href="#i-ghost"/></svg>
+        <div class="fog fog--1"></div>
+        <div class="fog fog--2"></div>
+        <svg class="web web--l" width="160" height="160"><use href="#i-web"/></svg>
+        <svg class="web web--r" width="160" height="160"><use href="#i-web"/></svg>
+      </div>
+
+      <div class="hero__content">
+        <p class="ribbon ribbon--small" data-anim style="--d:0"><span data-i18n="hero.org">Skull Darts 71</span></p>
+        <h1 class="hero__title" id="hero-title">
+          <span class="hero__title-main" data-split>Halloween</span>
+          <span class="hero__title-sub" data-anim style="--d:900">Party</span>
+        </h1>
+        <p class="ribbon ribbon--date" data-anim style="--d:1050"><span data-i18n="hero.date">Samedi 31 octobre</span></p>
+        <p class="hero__place" data-anim style="--d:1150">
+          <svg aria-hidden="true" width="18" height="18"><use href="#i-pin"/></svg>
+          <span data-i18n="hero.place">Salle des fêtes de Bellevesvre</span>
+        </p>
+
+        <div class="countdown" id="countdown" data-anim style="--d:1250" role="timer" aria-live="off" aria-label="Compte à rebours avant la fête" data-i18n-aria="cd.aria">
+          <div class="cd"><span class="cd__n" data-cd="d">00</span><span class="cd__l" data-i18n="cd.d">jours</span></div>
+          <div class="cd"><span class="cd__n" data-cd="h">00</span><span class="cd__l" data-i18n="cd.h">heures</span></div>
+          <div class="cd"><span class="cd__n" data-cd="m">00</span><span class="cd__l" data-i18n="cd.m">min</span></div>
+          <div class="cd"><span class="cd__n" data-cd="s">00</span><span class="cd__l" data-i18n="cd.s">sec</span></div>
+        </div>
+        <p class="countdown__msg" id="countdown-msg" hidden></p>
+
+        <div class="hero__cta" data-anim style="--d:1400">
+          <a class="btn btn--primary" href="#programme" data-sfx>
+            <svg aria-hidden="true" width="20" height="20"><use href="#i-dart"/></svg>
+            <span data-i18n="hero.cta1">Voir le programme</span>
+          </a>
+          <button class="btn btn--ghost" type="button" id="add-cal" data-sfx>
+            <svg aria-hidden="true" width="20" height="20"><use href="#i-cal"/></svg>
+            <span data-i18n="hero.cta2">Ajouter à l’agenda</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="hero__pumpkins" aria-hidden="true" data-anim style="--d:600">
+        <svg class="pk pk--1" width="90" height="80"><use href="#i-pumpkin"/></svg>
+        <svg class="pk pk--2" width="130" height="115"><use href="#i-pumpkin"/></svg>
+        <svg class="pk pk--3" width="70" height="62"><use href="#i-pumpkin"/></svg>
+      </div>
+      <a class="scroll-hint" href="#programme" aria-label="Défiler vers le programme" data-i18n-aria="hero.scroll"><span></span></a>
+    </section>
+
+    <!-- ===== PROGRAMME ===== -->
+    <section class="section" id="programme" aria-labelledby="prog-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow" data-i18n="prog.eyebrow">Une soirée, deux ambiances</p>
+          <h2 class="section__title" id="prog-title" data-i18n="prog.title">Le programme</h2>
+        </header>
+
+        <div class="cards">
+          <article class="card card--kids reveal" data-tilt>
+            <div class="card__badge"><span data-i18n="prog.kids.when">Dès 17h</span></div>
+            <svg class="card__icon" aria-hidden="true" width="64" height="64"><use href="#i-candy"/></svg>
+            <h3 data-i18n="prog.kids.title">Pour les enfants</h3>
+            <p class="card__big" data-i18n="prog.kids.big">Goûter &amp; Boom</p>
+            <p data-i18n="prog.kids.text">Bonbons, gourmandises et piste de danse rien que pour les petits monstres. Sorcières, fantômes et pirates bienvenus&nbsp;!</p>
+          </article>
+
+          <article class="card card--adults reveal" data-tilt>
+            <div class="card__badge"><span data-i18n="prog.adults.when">Dès 19h30</span></div>
+            <svg class="card__icon" aria-hidden="true" width="64" height="64"><use href="#i-music"/></svg>
+            <h3 data-i18n="prog.adults.title">Pour les adultes</h3>
+            <p class="card__big" data-i18n="prog.adults.big">Happy Hour &amp; DJ</p>
+            <p data-i18n="prog.adults.text">Happy hour de 19h30 à 20h30, puis animation DJ pour danser jusqu’au bout de la nuit d’Halloween.</p>
+          </article>
+        </div>
+
+        <ol class="timeline" aria-label="Déroulé de la soirée" data-i18n-aria="tl.aria">
+          <li class="tl reveal"><time datetime="2026-10-31T17:00">17h00</time><div><b data-i18n="tl.1.t">Ouverture des portes</b><span data-i18n="tl.1.d">Goûter &amp; boom des enfants</span></div></li>
+          <li class="tl reveal"><time datetime="2026-10-31T19:30">19h30</time><div><b data-i18n="tl.2.t">Happy hour</b><span data-i18n="tl.2.d">Jusqu’à 20h30 · place aux adultes</span></div></li>
+          <li class="tl reveal"><time datetime="2026-10-31T20:30">20h30</time><div><b data-i18n="tl.3.t">Animation DJ</b><span data-i18n="tl.3.d">Platines, lumières et costumes</span></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== INFOS ===== -->
+    <section class="section section--alt" id="infos" aria-labelledby="info-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow" data-i18n="info.eyebrow">À savoir avant de venir</p>
+          <h2 class="section__title" id="info-title" data-i18n="info.title">Infos pratiques</h2>
+        </header>
+
+        <div class="infos">
+          <div class="info reveal">
+            <svg aria-hidden="true" width="44" height="44"><use href="#i-ticket"/></svg>
+            <h3 data-i18n="info.price.t">Entrée</h3>
+            <p class="info__big">3&nbsp;€</p>
+            <p data-i18n="info.price.d">Pour toute la soirée</p>
+          </div>
+          <div class="info reveal">
+            <svg aria-hidden="true" width="44" height="44"><use href="#i-glass"/></svg>
+            <h3 data-i18n="info.bar.t">Buvette</h3>
+            <p class="info__big" data-i18n="info.bar.big">&amp; petite resto</p>
+            <p data-i18n="info.bar.d">Boissons et pasta box sur place</p>
+          </div>
+          <div class="info reveal">
+            <svg aria-hidden="true" width="44" height="44"><use href="#i-mask"/></svg>
+            <h3 data-i18n="info.costume.t">Soirée</h3>
+            <p class="info__big" data-i18n="info.costume.big">déguisée</p>
+            <p data-i18n="info.costume.d">Venez costumés, petits et grands</p>
+          </div>
+          <div class="info reveal">
+            <svg aria-hidden="true" width="44" height="44"><use href="#i-pin"/></svg>
+            <h3 data-i18n="info.place.t">Lieu</h3>
+            <p class="info__big" data-i18n="info.place.big">Bellevesvre</p>
+            <p data-i18n="info.place.d">Salle des fêtes · Saône-et-Loire (71)</p>
+          </div>
+        </div>
+
+        <div class="cta-band reveal">
+          <a class="btn btn--primary" href="https://www.google.com/maps/search/?api=1&amp;query=Salle+des+f%C3%AAtes+Bellevesvre+71270" target="_blank" rel="noopener" data-sfx>
+            <svg aria-hidden="true" width="20" height="20"><use href="#i-pin"/></svg>
+            <span data-i18n="info.route">Itinéraire</span>
+          </a>
+          <button class="btn btn--ghost" type="button" id="share" data-sfx>
+            <svg aria-hidden="true" width="20" height="20"><use href="#i-share"/></svg>
+            <span data-i18n="info.share">Partager l’événement</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MINI-JEU ===== -->
+    <section class="section" id="jeu" aria-labelledby="game-title">
+      <div class="container game">
+        <header class="section__head reveal">
+          <p class="eyebrow" data-i18n="game.eyebrow">Échauffez votre poignet</p>
+          <h2 class="section__title" id="game-title" data-i18n="game.title">Défi fléchettes</h2>
+          <p class="section__lead" data-i18n="game.lead">Le viseur bouge tout seul : touchez la cible (ou appuyez sur Espace) au bon moment. Trois fléchettes, un maximum de points&nbsp;!</p>
+        </header>
+
+        <div class="game__wrap reveal">
+          <canvas class="game__board" id="game-canvas" width="520" height="520" tabindex="0" role="img" aria-label="Cible de fléchettes interactive" data-i18n-aria="game.aria"></canvas>
+          <div class="game__panel">
+            <dl class="scores">
+              <div><dt data-i18n="game.darts">Fléchettes</dt><dd id="g-darts">3</dd></div>
+              <div><dt data-i18n="game.score">Score</dt><dd id="g-score">0</dd></div>
+              <div><dt data-i18n="game.best">Record</dt><dd id="g-best">0</dd></div>
+            </dl>
+            <p class="game__last" id="g-last" aria-live="polite">&nbsp;</p>
+            <button class="btn btn--primary" type="button" id="g-throw" data-i18n="game.throw">Lancer !</button>
+            <button class="btn btn--ghost" type="button" id="g-reset" data-i18n="game.reset">Nouvelle partie</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== AFFICHE ===== -->
+    <section class="section section--alt" id="affiche" aria-labelledby="poster-title">
+      <div class="container poster">
+        <div class="poster__text reveal">
+          <p class="eyebrow" data-i18n="poster.eyebrow">À imprimer, à partager</p>
+          <h2 class="section__title" id="poster-title" data-i18n="poster.title">L’affiche officielle</h2>
+          <p class="section__lead" data-i18n="poster.lead">Collez-la au bureau, envoyez-la à vos amis et rameutez tous les monstres du coin.</p>
+          <div class="cta-band cta-band--left">
+            <a class="btn btn--primary" href="assets/img/affiche-768.jpg" download="halloween-party-skull-darts-71.jpg" data-sfx>
+              <svg aria-hidden="true" width="20" height="20"><use href="#i-download"/></svg>
+              <span data-i18n="poster.dl">Télécharger l’affiche</span>
+            </a>
+          </div>
+        </div>
+        <button class="poster__frame reveal" type="button" id="poster-open" aria-label="Agrandir l’affiche" data-i18n-aria="poster.zoom">
+          <picture>
+            <source type="image/webp" srcset="assets/img/affiche-480.webp 480w, assets/img/affiche-768.webp 768w" sizes="(max-width: 700px) 86vw, 420px">
+            <img src="assets/img/affiche-768.jpg" width="768" height="1376" loading="lazy" decoding="async" alt="Affiche Halloween Party Skull Darts 71 : samedi 31 octobre, salle des fêtes de Bellevesvre, enfants dès 17h, adultes dès 19h30, entrée 3 €" data-i18n-alt="poster.alt">
+          </picture>
+        </button>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="container container--narrow">
+        <header class="section__head reveal">
+          <p class="eyebrow" data-i18n="faq.eyebrow">Questions fréquentes</p>
+          <h2 class="section__title" id="faq-title" data-i18n="faq.title">FAQ</h2>
+        </header>
+        <div class="faq">
+          <details class="reveal"><summary data-i18n="faq.1.q">Faut-il réserver ?</summary><p data-i18n="faq.1.a">Aucune réservation n’est indiquée : l’entrée se règle sur place, 3&nbsp;€.</p></details>
+          <details class="reveal"><summary data-i18n="faq.2.q">Le déguisement est-il obligatoire ?</summary><p data-i18n="faq.2.a">C’est une soirée déguisée : on compte sur vous pour jouer le jeu, enfants comme adultes&nbsp;!</p></details>
+          <details class="reveal"><summary data-i18n="faq.3.q">Peut-on manger sur place ?</summary><p data-i18n="faq.3.a">Oui, une buvette et une petite restauration vous attendent toute la soirée.</p></details>
+          <details class="reveal"><summary data-i18n="faq.4.q">À quelle heure venir avec les enfants ?</summary><p data-i18n="faq.4.a">Le goûter et la boom des enfants commencent à 17h. La partie adultes démarre à 19h30.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__brand"><img src="assets/img/icon.svg" width="40" height="40" alt="" loading="lazy"> <span><b>Skull Darts 71</b> · <span data-i18n="footer.tag">Club de fléchettes</span></span></p>
+      <p class="footer__small"><span data-i18n="footer.org">Événement organisé par Skull Darts 71.</span> <button type="button" class="linkbtn" id="replay-intro" data-i18n="footer.replay">Rejouer l’intro</button></p>
+    </div>
+  </footer>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Affiche en grand" data-i18n-aria="poster.dialog">
+    <button class="lightbox__close ctrl" type="button" id="lightbox-close" aria-label="Fermer" data-i18n-aria="close">✕</button>
+    <img alt="" width="768" height="1376" id="lightbox-img">
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- ===== Sprites SVG ===== -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <radialGradient id="pk-g" cx="50%" cy="45%" r="60%"><stop offset="0" stop-color="#ffb347"/><stop offset=".7" stop-color="#f26b0f"/><stop offset="1" stop-color="#b8430a"/></radialGradient>
+      <radialGradient id="pk-in" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#fff6a8"/><stop offset="1" stop-color="#ffb000"/></radialGradient>
+    </defs>
+    <symbol id="i-pumpkin" viewBox="0 0 120 106">
+      <path d="M58 16c0-7 4-12 10-14l3 4c-5 2-7 6-7 10z" fill="#4c7a2a"/>
+      <ellipse cx="38" cy="62" rx="30" ry="40" fill="url(#pk-g)"/>
+      <ellipse cx="82" cy="62" rx="30" ry="40" fill="url(#pk-g)"/>
+      <ellipse cx="60" cy="62" rx="28" ry="43" fill="url(#pk-g)" stroke="#b8430a" stroke-opacity=".35" stroke-width="2"/>
+      <path d="M34 50l12-10 6 14z M86 50L74 40l-6 14z" fill="url(#pk-in)"/>
+      <path d="M58 58l4 0 -2 8z" fill="url(#pk-in)"/>
+      <path d="M30 70q30 26 60 0q-6 18-30 20q-24-2-30-20zm14 6l4 6 4-6zm22 0l4 6 4-6z" fill="url(#pk-in)"/>
+    </symbol>
+    <symbol id="i-bat" viewBox="0 0 100 50"><path fill="currentColor" d="M50 18c3-6 5-6 6-1 2 1 4 1 6 0 1-5 3-5 6 1 8-10 22-14 32-8-6 2-10 8-10 14-6-4-12-2-14 4-4-5-10-5-13 2-3 0-5 3-6 8-1-5-3-8-6-8-3-7-9-7-13-2-2-6-8-8-14-4 0-6-4-12-10-14 10-6 24-2 32 8 3-6 5-6 6-1 2 1 4 1 6 0z"/></symbol>
+    <symbol id="i-ghost" viewBox="0 0 90 110"><path fill="#f6f1ff" d="M45 4C22 4 8 22 8 46v54l10-8 9 10 9-10 9 10 9-10 9 10 9-10 10 8V46C82 22 68 4 45 4z"/><ellipse cx="32" cy="44" rx="6" ry="9" fill="#1b1030"/><ellipse cx="58" cy="44" rx="6" ry="9" fill="#1b1030"/><ellipse cx="45" cy="66" rx="7" ry="9" fill="#1b1030"/></symbol>
+    <symbol id="i-web" viewBox="0 0 160 160"><g fill="none" stroke="currentColor" stroke-width="1.2"><path d="M0 0L160 160M0 0L80 160M0 0L160 80M0 0L130 150M0 0L150 130M0 0L40 160M0 0L160 40"/><path d="M30 0q4 18 0 30q14-6 30 0M0 30q18-4 30 0"/><path d="M60 0q8 36 0 60q30-12 60 0q-10-14 0-30M0 60q36-8 60 0"/><path d="M100 0q10 56 0 100q50-16 100 0M0 100q56-10 100 0"/></g></symbol>
+    <symbol id="i-dart" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l9-9"/><path d="M13 11l2-2"/><path d="M15 9l5-5M17 4h3v3"/><circle cx="12" cy="12" r="0" /></g></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4M12 14v4M10 16h4"/></g></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-7 7-12a7 7 0 10-14 0c0 5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></g></symbol>
+    <symbol id="i-share" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></g></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></g></symbol>
+    <symbol id="i-sound" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h4l5-4v14l-5-4H4z"/><path d="M16.5 8.5a5 5 0 010 7M19 6a8.5 8.5 0 010 12"/></g></symbol>
+    <symbol id="i-mute" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h4l5-4v14l-5-4H4z"/><path d="M17 9l5 6M22 9l-5 6"/></g></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M20 14.5A8 8 0 019.5 4a8 8 0 1010.5 10.5z"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></g></symbol>
+    <symbol id="i-ticket" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M3 8a2 2 0 002-2h14a2 2 0 002 2v2a2 2 0 000 4v2a2 2 0 00-2 2H5a2 2 0 00-2-2v-2a2 2 0 000-4z"/><path d="M14 6v12" stroke-dasharray="2 2"/></g></symbol>
+    <symbol id="i-glass" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h7v6a3.5 3.5 0 01-7 0zM8.5 13.5V20M6 20h5"/><path d="M14 8h5v11a1 1 0 01-1 1h-3a1 1 0 01-1-1z"/><path d="M14 11h5"/></g></symbol>
+    <symbol id="i-mask" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3C7 3 4 6.5 4 11c0 3.5 2 5.5 3.5 6.5V21h9v-3.5C18 16.5 20 14.5 20 11c0-4.5-3-8-8-8z"/><circle cx="9" cy="11" r="2"/><circle cx="15" cy="11" r="2"/><path d="M10.5 16h3"/></g></symbol>
+    <symbol id="i-candy" viewBox="0 0 64 64"><g stroke-linejoin="round"><path d="M14 22L4 14l2 16zM50 42l10 8-2-16z" fill="#ff7a18"/><circle cx="32" cy="32" r="16" fill="#9b5de5"/><path d="M20 22c8 4 16 16 24 20M18 32c8 0 18 8 22 12M28 17c6 4 14 12 18 18" stroke="#f6ead2" stroke-width="3" fill="none" stroke-linecap="round"/></g></symbol>
+    <symbol id="i-music" viewBox="0 0 64 64"><circle cx="32" cy="32" r="26" fill="#1b1030" stroke="#ff7a18" stroke-width="3"/><circle cx="32" cy="32" r="16" fill="none" stroke="#9b5de5" stroke-width="2"/><circle cx="32" cy="32" r="5" fill="#ffd166"/><path d="M48 10l8 6-12 18" stroke="#f6ead2" stroke-width="3" fill="none" stroke-linecap="round"/></symbol>
+  </svg>
+
+  <script src="assets/js/i18n.js" defer></script>
+  <script src="assets/js/audio.js" defer></script>
+  <script src="assets/js/board.js" defer></script>
+  <script src="assets/js/intro.js" defer></script>
+  <script src="assets/js/game.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+</body>
+</html>

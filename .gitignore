@@ -1,0 +1,10 @@
+# OS / éditeurs
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+# Dépendances / sorties
+node_modules/
+*.log
+*.zip
