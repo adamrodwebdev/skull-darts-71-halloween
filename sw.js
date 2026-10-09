@@ -1,5 +1,5 @@
 /* Skull Darts 71 · Service worker (cache hors-ligne) */
-const CACHE = 'sd71-halloween-v2';
+const CACHE = 'sd71-halloween-v3';
 const ASSETS = [
   './', 'index.html', 'manifest.webmanifest',
   'assets/css/styles.css',

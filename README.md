@@ -2,7 +2,7 @@
 
 Site vitrine statique (HTML/CSS/JS natifs, aucune dépendance, aucun build).
 
-Version actuelle : **1.1.0** — voir [CHANGELOG.md](CHANGELOG.md).
+Version actuelle : **1.2.0** — voir [CHANGELOG.md](CHANGELOG.md).
 
 ## Lancer en local
 ```bash
