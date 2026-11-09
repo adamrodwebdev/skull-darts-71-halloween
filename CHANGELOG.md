@@ -3,6 +3,15 @@
 Toutes les évolutions notables du site sont consignées ici.
 Format : [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/) · Versionnage : [SemVer](https://semver.org/lang/fr/).
 
+## [1.2.3] – 2026-11-09
+### Sécurité
+- Le record du mini-jeu est relu strictement : des chiffres, au plus 180 (trois triples 20) ; une valeur modifiée (« 999999abc ») n'est plus prise pour un record.
+- Le titre lettre par lettre est construit avec le DOM : son texte n'est jamais relu comme du HTML.
+
+### Modifié
+- Le curseur dit ce qui se clique : la flèche sur le contenu, la main sur les seuls liens, boutons et contrôles ; la cible garde son viseur.
+- Feuille de style et scripts modifiés versionnés (`?v=1.2.3`) ; service worker cache `v6`.
+
 ## [1.2.2] – 2026-10-11
 ### Modifié
 - Nouvelle affiche officielle (mention IPNS) : versions WebP 480/768, JPG 768 et image de partage (Open Graph) régénérées.

@@ -15,7 +15,12 @@
   var running = false, visible = false, raf = 0, t0 = performance.now(), lastFrame = 0;
   var lastMsg = null;
 
-  try { best = parseInt(localStorage.getItem('sd71-best') || '0', 10) || 0; } catch (e) {}
+  // Record lu strictement (règle du 9 novembre 2026) : des chiffres, au plus 180 (trois triples 20)
+  var BEST_MAX = 180;
+  try {
+    var stored = localStorage.getItem('sd71-best') || '';
+    best = /^\d{1,3}$/.test(stored) && Number(stored) <= BEST_MAX ? Number(stored) : 0;
+  } catch (e) {}
   elBest.textContent = best;
 
   function resize() {
