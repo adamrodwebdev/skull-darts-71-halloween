@@ -15,10 +15,20 @@
   /* ---------- Titre lettre par lettre ---------- */
   var title = $('[data-split]');
   if (title) {
+    // Construit avec le DOM : le texte reste du texte (jamais relu comme du HTML)
     var txt = title.textContent;
-    title.innerHTML = '<span class="sr-only">' + txt + '</span>' + txt.split('').map(function (c, i) {
-      return '<span class="ch" aria-hidden="true" style="--i:' + i + '">' + c + '</span>';
-    }).join('');
+    var reader = document.createElement('span');
+    reader.className = 'sr-only';
+    reader.textContent = txt;
+    title.replaceChildren(reader);
+    txt.split('').forEach(function (c, i) {
+      var ch = document.createElement('span');
+      ch.className = 'ch';
+      ch.setAttribute('aria-hidden', 'true');
+      ch.style.setProperty('--i', String(i));
+      ch.textContent = c;
+      title.appendChild(ch);
+    });
   }
 
   /* ---------- Révélation du héro après l'intro ---------- */

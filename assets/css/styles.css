@@ -75,6 +75,12 @@ p{margin:0}
 body.is-locked{overflow:hidden}
 
 /* ---------- Boutons ---------- */
+/* Le curseur dit ce qui se clique (règle du 9 novembre 2026) : la flèche sur le contenu, la main sur les seuls éléments cliquables */
+html{cursor:default}
+a[href],area[href],button:not(:disabled),select:not(:disabled),summary,label[for],[role='button'],[role='link'],[role='tab'],[role='menuitem'],[role='option'],[role='switch'],input:is([type='checkbox'],[type='radio'],[type='submit'],[type='button'],[type='reset'],[type='file'],[type='color'],[type='range']):not(:disabled){cursor:pointer}
+label:has(> input:not(:disabled)){cursor:pointer}
+input:is(:not([type]),[type='text'],[type='email'],[type='search'],[type='password'],[type='number'],[type='tel'],[type='url']):not(:disabled),textarea:not(:disabled),[contenteditable='true']{cursor:text}
+:disabled,[aria-disabled='true']{cursor:not-allowed}
 .btn{--b:var(--accent);display:inline-flex;align-items:center;justify-content:center;gap:.55em;min-height:48px;padding:.75em 1.4em;border-radius:999px;border:2px solid var(--b);font-weight:600;font-size:1rem;text-decoration:none;cursor:pointer;position:relative;overflow:hidden;isolation:isolate;transition:transform .35s var(--ease-spring),box-shadow .35s,background-color .3s,color .3s}
 .btn svg{flex:none}
 .btn--primary{background:var(--accent);color:var(--on-accent);box-shadow:0 10px 30px -10px var(--glow)}
